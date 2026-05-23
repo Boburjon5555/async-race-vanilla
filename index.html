@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Async Race (Vanilla JS)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button id="to-garage-btn">To Garage</button>
+    <button id="to-winners-btn">To Winners</button>
+  </header>
+
+  <!-- GARAGE SAHIFASI -->
+  <main id="garage-view">
+    <div class="control-panel">
+      <div class="input-group">
+        <input type="text" id="create-name" placeholder="Car name">
+        <input type="color" id="create-color" value="#ff0000">
+        <button id="create-btn">Create Car</button>
+      </div>
+      
+      <!-- POYGA BOSHQARUV TUGMALARI -->
+      <div class="race-controls">
+        <button id="race-btn">🏎️ Race</button>
+        <button id="reset-btn" disabled>🔄 Reset</button>
+        <button id="generate-btn">⚡ Generate 100 Cars</button>
+      </div>
+    </div>
+
+    <!-- G'OLIBNI KO'RSATISH UCHUN ANONS -->
+    <div id="winner-message" class="winner-announcement" style="display: none;"></div>
+
+    <h2>Garage (<span id="car-count">0</span>)</h2>
+    <div id="cars-container"></div>
+
+    <div class="pagination">
+      <button id="prev-page-btn">Prev</button>
+      <span id="page-num">Page 1</span>
+      <button id="next-page-btn">Next</button>
+    </div>
+  </main>
+
+  <!-- G'OLIBLAR SAHIFASI -->
+  <main id="winners-view" style="display: none;">
+    <h2>Winners</h2>
+    <p>Winners table comes here...</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
